@@ -17,15 +17,7 @@ void printing_pairs() {
         int num2 = num1;
         int counter_num2 = 0;  // Counter for inner loop
 
-        // Using while loop for num2
-        while (num2 < 61) {
-            if (num1 + num2 == 60) {
-                std::cout << "(" << num1 << ", " << num2 << ")" << std::endl;
-            }
-            num2++;
-            counter_num2 += 1;
-        }
-    }
+       
 }
 
 int main() {
