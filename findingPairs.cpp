@@ -28,6 +28,7 @@ void printing_pairs() {
     }
 }
 
+
 int main() {
     // Welcome message
     std::cout << "Welcome! This program will tell you all the pairs of positive two-digit numbers whose sum is 60." << std::endl;
