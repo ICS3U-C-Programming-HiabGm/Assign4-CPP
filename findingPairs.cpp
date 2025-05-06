@@ -6,7 +6,7 @@
 #include <iostream>
 
 void printing_pairs() {
-    // Print all pairs whose sum is 60
+    // Print the pairs
     std::cout << "\nAll pairs of two-digit numbers whose sum is 60 :" << std::endl;
 
     int counter_num1 = 0;  // Counter for outer loop
@@ -15,7 +15,7 @@ void printing_pairs() {
     for (int num1 = 10; num1 < 100; ++num1) {
         counter_num1 += 1;
         int num2 = num1;
-        int counter_num2 = 0;  // Counter for inner loop
+        int counter_num2 = 0;  
 
         // Using while loop for num2
         while (num2 < 61) {
