@@ -7,7 +7,7 @@
 
 void printing_pairs() {
     // Print all pairs whose sum is 60
-    std::cout << "\nAll pairs of two-digit numbers whose sum is 60 (using for and while loop):" << std::endl;
+    std::cout << "\nAll pairs of two-digit numbers whose sum is 60 :" << std::endl;
 
     int counter_num1 = 0;  // Counter for outer loop
 
@@ -30,8 +30,7 @@ void printing_pairs() {
 
 int main() {
     // Welcome message
-    std::cout << "Welcome! This program will tell you all "
-         << "the pairs of positive two-digit numbers whose sum is 60." << std::endl;
+    std::cout << "Welcome! This program will tell you all the pairs of positive two-digit numbers whose sum is 60." << std::endl;
 
     // Ask user for input and catch errors
     try {
@@ -39,19 +38,18 @@ int main() {
         std::cout << "Enter a two-digit number: ";
         std::cin >> user_input;  
 
-
         // Check if the input is a valid two-digit number between 10–59
         if (user_input >= 10 && user_input <= 59) {
             int pair2 = 60 - user_input;
             if (pair2 >= 10 && pair2 <= 59) {
                 std::cout << "The number that adds up to 60 with " << user_input << " is " << pair2 << "." << std::endl;
             } else {
-                std::cout << "No valid two-digit number adds up to 60 with " << user_input << "." << std::endl;
+                std::cout << "No valid two-digit number adds up to 60 with " << user_input << std::endl;
             }
         } else {
             std::cout << "Invalid argument: Please enter a two-digit number between 10 and 59." << std::endl;
         }
-    } catch (...) {
+    } catch (std::invalid_argument& e) {
         std::cout << "Invalid input! Please enter a valid two-digit integer." << std::endl;
     }
 
