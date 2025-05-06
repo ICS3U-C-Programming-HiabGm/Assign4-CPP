@@ -17,7 +17,15 @@ void printing_pairs() {
         int num2 = num1;
         int counter_num2 = 0;  // Counter for inner loop
 
-       
+        // Using while loop for num2
+        while (num2 < 61) {
+            if (num1 + num2 == 60) {
+                std::cout << "(" << num1 << ", " << num2 << ")" << std::endl;
+            }
+            num2++;
+            counter_num2 += 1;
+        }
+    }
 }
 
 int main() {
@@ -26,13 +34,7 @@ int main() {
 
     // Ask user for input and catch errors
     try {
-        int user_input;
-        std::cout << "Enter a two-digit number: ";
-        std::cin >> user_input;  
-
-        // Check if the input is a valid two-digit number between 10–59
-        if (user_input >= 10 && user_input <= 59) {
-            int pair2 = 60 - user_input;
+        
             if (pair2 >= 10 && pair2 <= 59) {
                 std::cout << "The number that adds up to 60 with " << user_input << " is " << pair2 << "." << std::endl;
             } else {
