@@ -49,7 +49,9 @@ int main() {
         } else {
             std::cout << "Invalid argument: Please enter a two-digit number between 10 and 59." << std::endl;
         }
-    } 
+    } catch (std::invalid_argument& e) {
+        std::cout << "Invalid input! Please enter a valid two-digit integer." << std::endl;
+    }
 
     // Call function
     printing_pairs();
