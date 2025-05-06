@@ -53,7 +53,6 @@ int main() {
     } catch (...) {
         std::cout << "Invalid input! Please enter a valid two-digit integer." << std::endl;
     }
-
     // Call function
     printing_pairs();
 
