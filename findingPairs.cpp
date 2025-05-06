@@ -34,15 +34,16 @@ int main() {
 
     // Ask user for input and catch errors
     try {
-        
+        int user_input;
+        std::cout << "Enter a two-digit number: ";
+        std::cin >> user_input;  
+
+        // Check if the input is a valid two-digit number between 10–59
+        if (user_input >= 10 && user_input <= 59) {
+            int pair2 = 60 - user_input;
             if (pair2 >= 10 && pair2 <= 59) {
                 std::cout << "The number that adds up to 60 with " << user_input << " is " << pair2 << "." << std::endl;
-            } else {
-                std::cout << "No valid two-digit number adds up to 60 with " << user_input << std::endl;
-            }
-        } else {
-            std::cout << "Invalid argument: Please enter a two-digit number between 10 and 59." << std::endl;
-        }
+            } else 
     } catch (std::invalid_argument& e) {
         std::cout << "Invalid input! Please enter a valid two-digit integer." << std::endl;
     }
